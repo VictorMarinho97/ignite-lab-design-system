@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 #storybook
-sorybook-static
+storybook-static
