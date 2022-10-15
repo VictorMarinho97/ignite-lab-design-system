@@ -1,6 +1,16 @@
 import { themes } from '@storybook/theming' /*Sem isso, o preview não fica escuro*/
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
 
 import '../src/styles/global.css'
+
+// Initialize MSW
+initialize({
+  onUnhandleadRequest: 'bypass' /*Impedir de dar logs que não esperamos com o msw*/
+});
+
+// Provide the MSW addon decorator globally
+export const decorators = [mswDecorator];
 
 
 export const parameters = {
