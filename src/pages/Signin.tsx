@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 import { CheckBox } from "../components/Checkbox";
 import { Heading } from "../components/Heading";
 import { TextInput } from "../components/TextInput";
-import { Text } from "../components/text";
+import { Text } from "../components/Text";
 import { Logo } from "../Logo";
 import { FormEvent, useState } from "react";
 import axios from 'axios'
