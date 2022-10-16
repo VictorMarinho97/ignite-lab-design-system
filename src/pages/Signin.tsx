@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 import { CheckBox } from "../components/Checkbox";
 import { Heading } from "../components/Heading";
 import { TextInput } from "../components/TextInput";
-import { Text } from "../components/Text";
+import { Text } from "../components/Text"; 
 import { Logo } from "../Logo";
 import { FormEvent, useState } from "react";
 import axios from 'axios'
@@ -11,7 +11,7 @@ import axios from 'axios'
 export function SignIn() {
     const [isUserSignedIn, setIsUserSignedIn] = useState(false) /*Simulação de estado para login. Sempre que criar uma variável booleana, é bom tentar criar uma variável como se fosse uma pergunta.*/
 
-    async function handleSignIn(event: FormEvent) {
+    async function handleSignIn(event: FormEvent) { /*Não esquecer de adicionar a função no evento do form*/
         event.preventDefault()
 
         await axios.post('/sessions', {
@@ -32,7 +32,7 @@ export function SignIn() {
             </header>
 
             <form onSubmit={handleSignIn} className='flex flex-col gap-4 items-stretch w-full max-w-sm mt-10'>
-                {isUserSignedIn && <Text>Login realizado!</Text>}
+                {isUserSignedIn && <Text>Login realizado!</Text>} 
 
                 <label htmlFor='email' className='flex-flex-col gap-3'>
                     <Text className='font-semibold'>Endereço de e-mail</Text>
